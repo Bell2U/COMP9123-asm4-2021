@@ -108,6 +108,7 @@ class QuokkaMaze:
             return False
         
         u.add_edge(v)
+        v.add_edge(u)
         return True
         
 
@@ -129,8 +130,9 @@ class QuokkaMaze:
             return False
         if u == v:
             return False
-        if u in v.edges:
+        if u in v.edges or v in u.edges:
             u.rm_edge(v)
+            v.rm_edge(u)
             return True
         else:
             return False

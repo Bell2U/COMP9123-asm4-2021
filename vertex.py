@@ -57,7 +57,6 @@ class Vertex:
         # TODO implement me please!
         if isinstance(v, Vertex) and v in self.edges:
             self.edges.remove(v)
-            v.edges.remove(self)
     
     def did_we_eat_here(self) -> bool:
         """Did quokkas have a meal on this vertex?
