@@ -47,7 +47,6 @@ class Vertex:
         if isinstance(v, Vertex) and v not in self.edges:
             if v != self:
                 self.edges.append(v)
-                v.edges.append(self)
 
     def rm_edge(self, v: 'Vertex') -> None:
         """
