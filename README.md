@@ -16,8 +16,8 @@ The main operation consists of finding a path from vertex s to vertex t such tha
 
 Implement find_path(s, t, k) returning the list of vertices used in the path, or None if no path exists.
 
-```fix_edge(u, v)
-block_edge(u, v)```
+`fix_edge(u, v)`
+`block_edge(u, v)`
 We may need to update the graph sometimes when a certain edge is blocked or becomes accessible again. Implement the block_edge(u, v) and fix_edge(u, v) functions that removes an existing edge (if exists), or adds a new edge to the graph (if doesn't exist yet).
 
 `exists_path_with_extra_food(s, t, k, x)`
