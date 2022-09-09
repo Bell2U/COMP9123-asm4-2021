@@ -11,17 +11,20 @@ Since the quokkas need to eat every so often, every vertex has the additional in
 Please help the quokkas find a path from their current home to their destination such that they have sufficient food along the way.
 
 Informally, our implementation should support the following operations:
-
-`find_path(s, t, k)`
+```
+find_path(s, t, k)
+```
 The main operation consists of finding a path from vertex s to vertex t such that from any location with food along this path we reach the next location with food in at most `k` steps.
 
 Implement `find_path(s, t, k)` returning the list of vertices used in the path, or `None` if no path exists.
-
-`fix_edge(u, v)`
-`block_edge(u, v)`
+```
+fix_edge(u, v)
+block_edge(u, v)
+```
 We may need to update the graph sometimes when a certain edge is blocked or becomes accessible again. Implement the `block_edge(u, v)` and `fix_edge(u, v)` functions that removes an existing edge (if exists), or adds a new edge to the graph (if doesn't exist yet).
-
-`exists_path_with_extra_food(s, t, k, x)`
+```
+exists_path_with_extra_food(s, t, k, x)
+```
 We also want to help the quokkas by placing some extra food ourselves. Implement a method `exists_path_with_extra_food(s, t, k, x)` that returns whether it is possible for the quokkas to make it from s to t along a path where from any location with food we reach the next location with food in at most k steps, by placing food at at most x new locations. In other words, is it possible to place food at x new locations such that afterwards `find_path(s, t, k)` can find a path?
 
 ### Note
@@ -55,10 +58,13 @@ __Properties__
 * `edges` - [List[Vertex]] the list of vertices connected to this vertex, forming edges in the graph.
 
 Functions
-`add_edge(v)`
+```
+add_edge(v)
+```
 Adds an edge between this vertex and the Vertex v.
-
-`rm_edge(v)`
+```
+rm_edge(v)
+```
 Removes the edge between this vertex and the Vertex v.
 
 graph.py
@@ -69,25 +75,31 @@ __Properties__
 * `vertices` - [List[Vertex]] the list of vertices in the graph.
 
 Functions
-`add_vertex(v) -> bool`
+```
+add_vertex(v) -> bool
+```
 Adds the Vertex `v` to the graph, returning `True` if the operation was successful, `False` if it was not, or it was invalid.
-
-`fix_edge(u, v) -> bool`
+```
+fix_edge(u, v) -> bool
+```
 Fixes an edge between two vertices, u and v. If an edge already exists, or the edge is invalid, then this operation should return False. Else, if the operation succeeds, return `True`.
 
 Example: If an edge between `u` and `v` already exists or is invalid, `fix_edge(u, v)` should return False.
-
-`block_edge(u, v) -> bool`
+```
+block_edge(u, v) -> bool
+```
 Blocks the edge between two vertices, u and v. Removes the edge if it exists, and returns `True` if the operation was successful. If the edge does not exist or is invalid, it should be unsuccessful and return `False`.
-
-`find_path(s, t, k) -> List[Vertex] or None`
+```
+find_path(s, t, k) -> List[Vertex] or None
+```
 Find a __SIMPLE PATH__ between Vertex `s` and Vertex `t` such that from any location with food along this path we reach the next location with food in at most `k` steps.
 
 This function returns: The list of vertices to form the simple path from `s` to `t` which satisfies the condition, or, `None` if there is no path that exists in the graph.
 
 If there are invalid aspects (invalid path, invalid input), then this function returns `None`.
-
-`exists_path_with_extra_food(s, t, k, x) -> bool`
+```
+exists_path_with_extra_food(s, t, k, x) -> bool
+```
 Determines whether it is possible for the quokkas to make it from Vertex `s` to Vertex `t` along a __SIMPLE path__ where from any location with food we reach the next location with food in at most `k` steps, by placing food at at most x new locations.
 
 This function returns `True` if we can complete the simple path with at most x additional food, else it returns `False`.
