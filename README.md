@@ -1,7 +1,7 @@
 # Python Implementation
 
-assignment 4 of the first semester in 2021  
-all test case passed  
+Assignment 4 of the first semester in 2021  
+All test case passed  
 
 ## Story
 A small quokka colony in Western Australia is migrating and since these creatures are vulnerable, we've been tasked with helping them make their way to their new home. For safety reasons, the quokka colony travels together at all times and can only travel between specific locations. We model these locations as the vertices of a simple undirected graph and two vertices are connected by an edge if the colony can travel from one location to the other.
