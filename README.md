@@ -1,7 +1,5 @@
-# Python Implementation
-
-COMP9123 data structure and algorithm  
-Assignment 4 of the first semester 2021 in USYD  
+# COMP9123 data structure and algorithm Assignment 4
+semester 1 2021 in USYD
 All test cases passed  
 
 ## Story
